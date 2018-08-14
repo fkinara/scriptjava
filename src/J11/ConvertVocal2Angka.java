@@ -5,10 +5,7 @@
  */
 package J11;
 
-/**
- *
- * @author WINDOWS 10
- */
+import java.util.Scanner;
 public class ConvertVocal2Angka {
     private static void tampilJudul(String identitas) {
         System.out.println("Identitas : "+ identitas);
@@ -16,7 +13,17 @@ public class ConvertVocal2Angka {
     } 
     public static void main(String[] args){
     String identitas = "Kinara Fakhrunnisa / XR3 / 16";
-    tampilJudul(identitas);
-    
+    tampilJudul(identitas); 
+    String kalimat = tampilInput();
 }
-}
+    private static String tampilInput() {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Masukkan Kalimat: ");
+        String kalimat = scanner.nextLine();
+        System.out.println("Kalimat asli: " + kalimat);
+        
+        return kalimat;
+        
+    }
+    }
