@@ -23,7 +23,7 @@ public class ConvertVocal2Angka {
     }
     private static String vocal2Angka(String kalimat) {
         char [][] arConvert = 
-        {{'a','4'},{'i','1'},{{'u','2'},{'e','3'},{'o','0'}};
+        {{'a','4'},{'i','1'},{'u','2'},{'e','3'},{'o','0'}};
                      
         kalimat = kalimat.toLowerCase();
         for (int i = 0; i < arConvert.length; i++) 
@@ -31,12 +31,21 @@ public class ConvertVocal2Angka {
         
         return kalimat;    
         }
+    public static void tampilPerKata(String kalimat, String convert) {
+        String[] arrKal = kalimat.split(" ");
+        String[] arrCon = convert.split(" ");
+        
+        for (int i = 0; i < arrKal.length; i++) 
+            System.out.println(arrKal[i]+" => "+arrCon[i]);
+    }
     
      public static void main(String[] args){
     String identitas = "Kinara Fakhrunnisa / XR3 / 16";
     tampilJudul(identitas); 
     String kalimat = tampilInput();
     String convert = vocal2Angka(kalimat);
+    tampilPerKata(kalimat, convert);
+    
     }
 }
 
