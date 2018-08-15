@@ -30,11 +30,19 @@ public class ConvertVocal2Angka {
         
         return kalimat;    
         }
+    public static void tampilPerKata(String kalimat, String convert) {
+        String[] arrKal = kalimat.split(" ");
+        String[] arrCon = convert.split(" ");
+        
+        for (int i = 0; i < arrKal.length; i++) 
+            System.out.println(arrKal[i]+" => "+arrCon[i]);
+    }
    public static void main(String[] args){
     String identitas = "Kinara Fakhrunnisa / XR3 / 16";
     tampilJudul(identitas); 
     String kalimat = tampilInput();
     String convert = vocal2Angka(kalimat);
+    tampilPerKata(kalimat, convert);
    }
 }
 
